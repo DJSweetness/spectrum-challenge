@@ -19,8 +19,6 @@ export function TableFilter(
             setFilters([...filters, inputValue.toLowerCase()]);
             inputRef.current.value = '';
         }
-
-        console.log(inputValue);
     }
     const handleClearFilters = (e: { preventDefault: Function }) => {
         e.preventDefault();
