@@ -1,5 +1,6 @@
 import { getFallBackRestaurantData } from "./fallbackRestaurantData";
 
+export type SortingTypes = 'name' | 'state' | 'genre';
 
 export interface IRestaurantData {
     id: string;
