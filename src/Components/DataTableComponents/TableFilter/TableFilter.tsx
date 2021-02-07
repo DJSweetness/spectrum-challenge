@@ -1,5 +1,6 @@
 import React, { Fragment, useRef } from 'react';
 import { FilterList } from './FilterList';
+import './TableFilter.scss';
 
 export function TableFilter(
     { filters, setFilters, setPaginationIndex }:

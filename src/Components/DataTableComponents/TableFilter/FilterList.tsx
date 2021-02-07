@@ -19,9 +19,9 @@ export function FilterList(
         <div>
             {
                 filters.map(filter => (
-                    <div key={filter}>
+                    <div className='single-filter-container' key={filter}>
                         {filter}
-                        <button key={filter} onClick={() => removeSpecificFilter(filter)}>X</button>
+                        <button className='clear-single-filter-button' key={filter} onClick={() => removeSpecificFilter(filter)}>X</button>
                     </div>
                 ))
             }

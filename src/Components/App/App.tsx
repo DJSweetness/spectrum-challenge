@@ -1,14 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { DataTable } from '../DataTableComponents/DataTable/DataTable';
 import { useQueryRestaurantData } from './hooks';
+import './App.scss';
 
 function App() {
   const restaurantData = useQueryRestaurantData();
 
   return (
-    <Fragment>
+    <div id='container'>
       <DataTable restaurantData={restaurantData}></DataTable>
-    </Fragment>
+    </div>
   )
 }
 

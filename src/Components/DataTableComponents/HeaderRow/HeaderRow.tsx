@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { SortingTypes } from "../../../API/fetchRestaurantData";
+import './HeaderRow.scss';
 
 export function HeaderRow(
     {
@@ -39,7 +40,7 @@ export function HeaderRow(
         <tr>
             {
                 headerColumns.map(header => (
-                    <th key={header}>
+                    <th id={`table-header-${header.toLowerCase()}`} key={header}>
                         {
                             sortingByList.includes(header.toLowerCase())
                                 ?

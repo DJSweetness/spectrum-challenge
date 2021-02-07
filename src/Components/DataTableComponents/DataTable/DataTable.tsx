@@ -30,7 +30,7 @@ export function DataTable(
     ));
 
     return (
-        <Fragment>
+        <div id='data-table-container'>
             <TableFilter filters={filters} setFilters={setFilters} setPaginationIndex={setPaginationIndex} />
             <table id='data-table'>
                 <thead>
@@ -57,6 +57,6 @@ export function DataTable(
                 paginationSize={paginationSize}
                 setPaginationIndex={setPaginationIndex}
             />
-        </Fragment>
+        </div>
     )
 }

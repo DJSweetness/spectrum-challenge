@@ -1,4 +1,5 @@
 import { IRestaurantData } from "../../../API/fetchRestaurantData";
+import './DataRow.scss';
 
 export function DataRow({
     name,
@@ -12,7 +13,7 @@ export function DataRow({
     ));
 
     return (
-        <tr key={name + '-' + city + '-' + telephone}>
+        <tr className='table-data-rows' key={name + '-' + city + '-' + telephone}>
             { TableDataComponents }
         </tr>
     )
