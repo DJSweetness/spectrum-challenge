@@ -1,3 +1,5 @@
+import { getFallBackRestaurantData } from "./fallbackRestaurantData";
+
 
 export interface IRestaurantData {
     id: string;
@@ -21,7 +23,7 @@ export function fetchRestaurantData() {
     const headers = {
         Authorization: 'Api-Key q3MNxtfep8Gt'
     };
-    const fallbackData = { fallback: 'data' };
+    const fallbackData = getFallBackRestaurantData();
 
     try {
         return fetch(endpoint, {
