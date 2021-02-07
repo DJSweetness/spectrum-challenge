@@ -1,4 +1,5 @@
 import React from 'react';
+import './Paginator.scss';
 
 export function Paginator(
     {
@@ -25,7 +26,7 @@ export function Paginator(
     const lastDataIndex = Math.min(paginationIndex+paginationSize, maxDataSize);
 
     return (
-        <div>
+        <div id='paginator-container'>
             <button
                 disabled={paginationIndex === 0}
                 onClick={handlePreviousClick}
