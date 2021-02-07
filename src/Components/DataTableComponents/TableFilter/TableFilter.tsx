@@ -22,23 +22,26 @@ export function TableFilter(
 
         console.log(inputValue);
     }
-    const handleClearFilters = () => {
+    const handleClearFilters = (e: { preventDefault: Function }) => {
+        e.preventDefault();
         setPaginationIndex(0);
         setFilters([]);
     }
 
     return (
-        <Fragment>
-            <div>
-                <input type='search' placeholder='Add filter here:' ref={inputRef} />
-                <button onClick={handleAddFilter}>Add Filter</button>
-                <button onClick={handleClearFilters}>Clear Filters</button>
+        <div id='filter-search-and-list-container'>
+            <div id='filter-search-container'>
+                <form onSubmit={(e) => { e.preventDefault(); }}>
+                    <input id='filter-input' type='search' placeholder='Add filter here:' ref={inputRef} />
+                    <button id='add-filter-button' type='submit' onClick={handleAddFilter}>Add Filter</button>
+                    <button id='clear-filters-button' onClick={handleClearFilters}>Clear Filters</button>
+                </form>
             </div>
             <FilterList
                 filters={filters}
                 setFilters={setFilters}
                 setPaginationIndex={setPaginationIndex}
             />
-        </Fragment>
+        </div>
     )
 }
